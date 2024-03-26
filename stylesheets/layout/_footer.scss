@@ -1,0 +1,85 @@
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  color: $white;
+  background: $footer_background url('../img/footer-background.png') 0 0 repeat;
+
+  .container {
+    display: flex;
+  }
+}
+
+.footer-contacts {
+  width: 320px;
+  margin: 0;
+  margin-right: 80px;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-social {
+  width: 140px;
+  text-align: center;
+
+  .social-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.social-button {
+  position: relative;
+  display: block;
+  width: 43px;
+  height: 43px;
+  background-color: $black;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $white;
+
+    path {
+      fill: $black;
+    }
+  }
+}
+
+.footer-copyright {
+  width: 145px;
+  margin: 0;
+  margin-left: auto;
+  text-align: center;
+
+  a:hover,
+  a:focus {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+.footer-copyright b,
+.footer-social b {
+  display: block;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,45 @@
+.page-title {
+  margin: 0;
+  margin-bottom: 15px;
+  @include calculate_font(30px, 42px);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style: none;
+
+  li:not(.breadcrumbs-current) {
+    $padding-right: 45px;
+
+    position: relative;
+    padding-right: $padding-right;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: $padding-right / 2;
+      width: 8px;
+      height: 8px;
+      background-color: $black;
+      transform: translate(50%, -50%) rotate(45deg);
+    }
+  }
+
+  a {
+    color: $black;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .breadcrumbs-current {
+    color: $disabled;
+  }
+}
